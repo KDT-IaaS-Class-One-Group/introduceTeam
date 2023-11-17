@@ -4,37 +4,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa;
+    }
+
+    header {
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    #content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .post {
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .post img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
   <title>Document</title>
 </head>
 
 <body>
-  <ul>자기소개
-    <li>김현
+
+  <header>
+    <h1>자기소개</h1>
+  </header>
+
+  <div id="content">
+    <!-- Sample Posts -->
+    <div>
+      <h2>김현</h2>
       <p>
 
       </p>
-    </li>
-    <li>신동현
-      <p>
+      <div>
+        <h2>신동현</h2>
+        <p>
+  
+        </p>
+      </div>
+      <div>
+        <h2>윤준현</h2>
+        <p>
+  
+        </p>
+      </div>
+      <div>
+        <h2>이민구</h2>
+        <p>
+  
+        </p>
+      </div>
+      <div>
+        <h2>홍문기</h2>
+        <p>
+  
+        </p>
+      </div>
+    </div>
+  </div>
 
-      </p>
-    </li>
-    <li>윤준현
-      <p>
-
-      </p>
-    </li>
-    <li>이민구
-      <p>
-
-      </p>
-    </li>
-    <li>홍문기
-      <p>
-
-      </p>
-    </li>
-  </ul>
+  <footer>
+    <p>&copy; 2023</p>
 </body>
 
 </html>
