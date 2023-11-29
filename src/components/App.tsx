@@ -1,40 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/App.scss';
 
+// 팀 멤버 정보 객체 배열
+const teamMembers = [
+  {
+    name: '김현',
+    bio: '김현의 소개',
+  },
+  {
+    name: '신동현',
+    bio: '신동현의 소개',
+  },
+  {
+    name: '윤준현',
+    bio: '윤준현의 소개',
+  },
+  {
+    name: '이민구',
+    bio: '이민구의 소개',
+  },
+  {
+    name: '홍문기',
+    bio: '홍문기의 소개',
+  },
+];
+
 const App = () => {
-  const teamName = 'form 미쳤다';
-  const bio = '안녕하세요! 저희는 폼이 미친 사람들 입니다.';
-  const teamMemberName = ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Webpack', 'SCSS'];
-  const projects = [
-    { title: '프로젝트 1', description: '프로젝트 1에 대한 간단한 설명' },
-    // 다른 프로젝트들 추가
-  ];
+  const [selectedMember, setSelectedMember] = useState<number | null>(null);
+
+  const handleMemberClick = (index: number) => {
+    setSelectedMember(index);
+  };
 
   return (
     <div className="app">
       <header>
-        <h1>{teamName}</h1>
-        <p>{bio}</p>
+        <h1>form 미쳤다</h1>
+        <p>안녕하세요! 저희는 폼이 미친 사람들 입니다.</p>
       </header>
       <section>
-        <h2>팀 구성 인원</h2>
         <ul>
-          {teamMemberName.map((tech, index) => (
-            <li key={index}>{tech}</li>
-          ))}
-        </ul>
-      </section>
-      <section>
-        <h2>프로젝트</h2>
-        <ul>
-          {projects.map((project, index) => (
-            <li key={index}>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
+          {teamMembers.map((member, index) => (
+            <li key={index} onClick={() => handleMemberClick(index)}>
+              {member.name}
             </li>
           ))}
         </ul>
       </section>
+      {selectedMember !== null && (
+        <section className="member-details">
+          <h2>{teamMembers[selectedMember].name}</h2>
+          <p>{teamMembers[selectedMember].bio}</p>
+        </section>
+      )}
     </div>
   );
 };
