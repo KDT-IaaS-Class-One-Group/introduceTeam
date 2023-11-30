@@ -8,8 +8,11 @@ export function render(virtualDom) {
 
   if (virtualDom.props) {
     for (const [key, value] of Object.entries(virtualDom.props)) {
-
-      element.setAttribute(key, value)
+      if (key === 'onClick') {
+        element.addEventListener('click', value);
+      } else {
+        element.setAttribute(key, value);
+      }
     }
   }
 
