@@ -1,0 +1,33 @@
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+  ul {
+    list-style: none;
+    padding: 10px;
+
+    li {
+      font-size: 1rem;
+      padding: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+
+      &.selected {
+        background-color: #e0e0e0;
+      }
+    }
+  }
+
+  &.open {
+    display: block;
+  }
+}
