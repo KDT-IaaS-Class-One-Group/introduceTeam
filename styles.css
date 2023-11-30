@@ -1,0 +1,90 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.decoBox {
+  position: absolute;
+  top: 1%;
+  border: 1px solid #d4cacd;
+  width: 47vw;
+  height: 98%;
+}
+
+.decoBox.left {
+  left: 1vw;
+}
+
+.decoBox.right {
+  right: 1vw;
+}
+
+#backgroundRoot {
+  width: 100vw;
+  height: 100vh;
+  background: #ce7b85;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  position: relative;
+  width: 98vw;
+  height: auto;
+  border: 1px solid #d4cacd;
+  padding: 0 1vw;
+}
+
+header {
+  /* 헤더 스타일링 */
+  height: 5vw;
+  outline: 1px solid black;
+}
+
+figure {
+  height: 20vh;
+  position: relative;
+}
+figure #teamUl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 150%;
+  height: 100%;
+  gap: 10vw;
+}
+figure #teamUl .teamLi {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid black;
+  background-color: #edcdc2;
+}
+
+#content {
+  /* 콘텐츠 스타일링 */
+  height: calc(100% - 25vh);
+  width: 100%;
+  background-color: #d4cacd;
+}
+
+/*# sourceMappingURL=styles.css.map */
