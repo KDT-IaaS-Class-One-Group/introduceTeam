@@ -1,57 +1,21 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>form 미쳤다 팀원 소개</title>
+  <meta charset="utf-8" />
+  <title>form 미쳤다! 팀원 소개</title>
 </head>
+
 <body>
-  <div id="root"></div>
-  <script>
-    function createElement(type, props, ...children) {
-      return { type, props, children };
-    }
+  <header id="title">
+    <h1>form 미쳤다!</h1>
     
-    function component(stateData) {
-      const menuItems = [];
-      for (let i = 0; i < stateData.length; i++) {
-        const item = stateData[i];
-        const menuItem = createElement('li', {}, createElement('a', { href: item.hash }, item.text));
-        menuItems.push(menuItem);
-      }
-      const menu = createElement('ul', {}, ...menuItems);
-      const content = createElement('div', {}, 'Hello React');
-      return createElement('div', {}, menu, content);
-    }
-    
-    function render(virtualDom) {
-      if (typeof virtualDom === 'string') {
-        return document.createTextNode(virtualDom);
-      }
-      const element = document.createElement(virtualDom.type);
-      if (virtualDom.props) {
-        for (const [key, value] of Object.entries(virtualDom.props)) {
-          element.setAttribute(key, value);
-        }
-      }
-      for (let i = 0; i < virtualDom.children.length; i++) {
-        const child = virtualDom.children[i];
-        element.appendChild(render(child));
-      }
-      return element;
-    }
-    
-    const stateData = [
-      { hash: '#home', text: 'Home' },
-      { hash: '#about', text: 'About' },
-      { hash: '#services', text: 'Services' },
-      { hash: '#portfolio', text: 'Portfolio' },
-      { hash: '#contact', text: 'Contact' }
-    ];
-    
-    const virtualDom = component(stateData);
-    const container = document.getElementById('root');
-    container.appendChild(render(virtualDom));
-  </script>
+  </header>
+  <nav id="menu"></nav>
+  <section id="intro"></section>
+  <footer>
+    <p>&copy; 2023 form 미쳤다</p>
+  </footer>
 </body>
+
 </html>
