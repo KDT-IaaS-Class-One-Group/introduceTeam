@@ -1,4 +1,4 @@
-export function menuComponent(stateData) {
+export function menuComponent(stateData, onMenuClick) {
 
   function createElement(type, props, ...children) {
   
@@ -8,7 +8,8 @@ export function menuComponent(stateData) {
   const menuItems = [];
   for (let i = 0; i < stateData.length; i++) {
     const item = stateData[i]
-    const menuItem = createElement('li', {}, createElement('a', { href: item.hash }, item.text))
+    const menuItem = createElement('li', { onclick: () => onMenuClick(item.hash)}, createElement('a', { href: item.hash }, item.text))
+    //* 콜백함수를 사용해서 hash이름일 때 onclick함수를 실행한다.
     menuItems.push(menuItem)
   }
 

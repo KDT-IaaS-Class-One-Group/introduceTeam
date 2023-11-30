@@ -1,5 +1,6 @@
 import { menuComponent } from "./js-module/menuComponent.js"
 import { render } from "./js-module/render.js"
+import { onMenuClick } from "./js-module/onMenuClick.js"
 
 export function load(){
   document.addEventListener('DOMContentLoaded',function(){
@@ -12,7 +13,7 @@ export function load(){
       { hash: '#홍문기', text: '홍문기' }
     ]
 
-    const virtualDom = menuComponent(stateData)
+    const virtualDom = menuComponent(stateData, onMenuClick)
     const container = document.getElementById('root')
     container.appendChild(render(virtualDom))
   })
