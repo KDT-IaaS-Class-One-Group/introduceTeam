@@ -14,8 +14,8 @@ export function menuComponent(stateData, onMenuClick) {
   }
 
   const menu = createElement('ul', {class: 'menu'}, ...menuItems)
-  // const content = createElement('div', {}, 'Hello React')
+  // const content = createElement('div', {}, 'Hello React', '어캐만들어질까?')
 
-  return createElement('div', {}, menu)
+  return createElement('div', {}, menu )
 }
 
