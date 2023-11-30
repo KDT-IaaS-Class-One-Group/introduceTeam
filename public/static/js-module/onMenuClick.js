@@ -1,8 +1,8 @@
-//* 컴포넌트
-import { introduceComponent } from "./introduceComponent";
+// //* 컴포넌트
+// import { introduceComponent } from "./introduceComponent";
 
-//* 데이터
-import { introduceData } from "./data/introduce.js"
+// //* 데이터
+// import { introduceData } from "./data/introduce.js"
 
 export function onMenuClick(hash) {
   // 각 메뉴 항목을 클릭할 때 호출되는 함수

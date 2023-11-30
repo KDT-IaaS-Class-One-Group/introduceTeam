@@ -2,7 +2,6 @@
 import { menuComponent } from "./js-module/menuComponent.js"
 import { render } from "./js-module/render.js"
 import { onMenuClick } from "./js-module/onMenuClick.js"
-// import { introduceComponent } from "./js-module/introduceComponent.js"
 
 //* data
 import { menuData } from "./data/menu.js"
