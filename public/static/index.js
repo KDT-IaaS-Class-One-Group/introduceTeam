@@ -6,7 +6,6 @@ import { onMenuClick } from "./js-module/onMenuClick.js"
 
 //* data
 import { menuData } from "./data/menu.js"
-// import { introduceData } from "./data/introduce.js"
 
 export function load(){
   document.addEventListener('DOMContentLoaded',function(){

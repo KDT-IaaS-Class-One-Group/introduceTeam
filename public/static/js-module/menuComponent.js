@@ -18,3 +18,4 @@ export function menuComponent(stateData, onMenuClick) {
 
   return createElement('div', {}, menu)
 }
+
