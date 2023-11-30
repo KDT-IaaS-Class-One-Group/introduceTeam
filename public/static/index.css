@@ -6,13 +6,6 @@
   list-style-type: none;
 }
 
-header {
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
-  text-align: center;
-}
-
 #root {
   display: flex;
   flex-wrap: wrap;
@@ -31,12 +24,3 @@ header {
   margin: 30px 30px;
 }
 
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #fff;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  border-top: 1px solid #ccc;
-}

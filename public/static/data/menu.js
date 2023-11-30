@@ -1,4 +1,4 @@
-export const stateData = [
+export const menuData = [
   { hash: '#김현', text: '김현' },
   { hash: '#이민구', text: '이민구' },
   { hash: '#윤준현', text: '윤준현' },
