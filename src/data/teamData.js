@@ -1,4 +1,4 @@
-export const stateData = [
+export const teamData = [
   { image: '', hash: '#김현', name: '김현', intro: '1' },
   { image: '', hash: '#신동현', name: '신동현', intro: '2' },
   { image: '', hash: '#윤준현', name: '윤준현', intro: '3' },

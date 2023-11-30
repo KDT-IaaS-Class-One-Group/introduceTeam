@@ -1,38 +1,16 @@
-// index.js
 import './styles/index.scss';
-import { stateData } from './data/teamData';
+import { teamData } from './data/teamData';
+import createElement from './utils/createElement';
+import { render, renderElement } from './utils/render';
 
-function createElement(type, props, ...children) {
-  return { type, props, children };
+function createMenuItem(item) {
+  return createElement('li', {}, createElement('a', { href: item.hash }, item.name));
 }
 
-function component(stateData) {
-  const menuItems = [];
-  for (let i = 0; i < stateData.length; i++) {
-    const item = stateData[i];
-    const menuItem = createElement('li', {}, createElement('a', { href: item.hash }, item.name));
-    menuItems.push(menuItem);
-  }
+function createMenu(stateData) {
+  const menuItems = stateData.map(createMenuItem);
   return createElement('ul', {}, ...menuItems);
 }
 
-function render(virtualDom) {
-  if (typeof virtualDom === 'string') {
-    return document.createTextNode(virtualDom);
-  }
-  const element = document.createElement(virtualDom.type);
-  if (virtualDom.props) {
-    for (const [key, value] of Object.entries(virtualDom.props)) {
-      element.setAttribute(key, value);
-    }
-  }
-  for (let i = 0; i < virtualDom.children.length; i++) {
-    const child = virtualDom.children[i];
-    element.appendChild(render(child));
-  }
-  return element;
-}
-
-const virtualDom = component(stateData);
-const container = document.getElementById('menu');
-container.appendChild(render(virtualDom));
+const virtualDom = createMenu(teamData);
+render(virtualDom, 'menu');
