@@ -32,6 +32,11 @@ a {
   transition: background-color 0.3s ease-in-out;
 }
 
+img {
+  width: 300px;
+  height: 300px;
+}
+
 a:hover {
   background-color: $secondary-color;
 }
