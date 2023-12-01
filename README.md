@@ -3,7 +3,7 @@
 ## 설치 필수
 ### npm 초기화
 ```
-npm init -y
+npm init -y
 ```
 ### webpack, webpack cli, webpack devserver 설치
 ```
