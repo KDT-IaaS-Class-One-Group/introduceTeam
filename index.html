@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <title>form 미쳤다! 팀원 소개</title>
 </head>
+
 <body>
   <div id="root"></div>
+  <script>
+
+    function handleHashChange() {
+      const hash = window.location.hash.substr(1);
+      console.log(hash); // 추가된 부분
+
+      switch (hash) {
+        case "%EA%B9%80%ED%98%84": // 김현
+          console.log("1");
+          break;
+        case "%EC%8B%A0%EB%8F%99%ED%98%84":
+          console.log("2");
+          break;
+        case "%EC%9C%A4%EC%A4%80%ED%98%84":
+          console.log("3");
+          break;
+        case "%EC%9D%B4%EB%AF%BC%EA%B5%AC":
+          console.log("4");
+          break;
+        case "%ED%99%8D%EB%AC%B8%EA%B8%B0":
+          console.log("5");
+          break;
+        default:
+          console.log("6");
+      }
+    }
+
+    // 페이지 로드 시 handleHashChange를 호출하여 해시를 확인
+    handleHashChange();
+
+    // 이벤트 리스너 등록
+    window.addEventListener("hashchange", handleHashChange);
+  </script>
 </body>
+
 </html>
