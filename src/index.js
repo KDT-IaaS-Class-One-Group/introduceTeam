@@ -8,13 +8,15 @@ import createElement from './utils/createElement';
 
 import { header } from './components/header';
 import { menu } from './components/menu';
-import { section } from './components/section';
+import { memberIntro } from './components/memberIntro';
+import { teamIntro } from './components/teamIntro';
 import { footer } from './components/footer';
 
 
 render(header(), 'root');
+render(teamIntro(), 'root');
 render(menu(teamData), 'root');
-render(section(), 'root');
+render(memberIntro(), 'root');
 render(footer(), 'root');
 
 window.addEventListener("hashchange", hashChange);
