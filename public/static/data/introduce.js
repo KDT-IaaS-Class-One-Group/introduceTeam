@@ -1,7 +1,7 @@
 export const introduceData ={
   '김현':{
     name: '김현',
-    profile: '사진첨부',
+    profile: 'https://avatars.githubusercontent.com/u/139582298?v=4',
     contact: {
       github: '김현 깃헙',
       email:'김현 이메일'
@@ -10,7 +10,7 @@ export const introduceData ={
   },
   '이민구':{
     name: '이민구',
-    profile: '사진첨부',
+    profile: 'https://avatars.githubusercontent.com/u/137541277?v=4',
     contact: {
       github: '',
       email:''
@@ -19,7 +19,7 @@ export const introduceData ={
   },
   '윤준현':{
     name: '윤준현',
-    profile: '사진첨부',
+    profile: 'https://avatars.githubusercontent.com/u/122344184?v=4',
     contact: {
       github: '',
       email:''
@@ -28,7 +28,7 @@ export const introduceData ={
   },
   '신동현':{
     name: '신동현',
-    profile: '사진첨부',
+    profile: 'https://avatars.githubusercontent.com/u/141980274?v=4',
     contact: {
       github: '',
       email:''
@@ -37,7 +37,7 @@ export const introduceData ={
   },
   '홍문기':{
     name: '홍문기',
-    profile: 'https://i.namu.wiki/i/rbOAzxvUuSSNv1VuxDAZn6t1e5Q-uf_MqqeyuQKRNLKpC0sQaKaxyLzhqIlRyEdOUpce9eMOzDxuN7MwWVcBzQ.webp',
+    profile: 'https://avatars.githubusercontent.com/u/141980247?v=4',
     contact: {
       github: 'https://github.com/hmoongi94',
       email:'hmoongi94@gmail.com'
