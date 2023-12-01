@@ -8,6 +8,7 @@
 
 #root {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
@@ -15,6 +16,7 @@
 
 .menu {
   display: flex;
+  justify-content: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
@@ -24,3 +26,11 @@
   margin: 30px 30px;
 }
 
+.introduce {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}

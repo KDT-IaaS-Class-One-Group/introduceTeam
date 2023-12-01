@@ -39,9 +39,9 @@ export const introduceData ={
     name: '홍문기',
     profile: '사진첨부',
     contact: {
-      github: '',
-      email:''
+      github: 'https://github.com/hmoongi94',
+      email:'hmoongi94@gmail.com'
     },
-    introduce: 'introduce'
+    introduce: '안녕하세요! kdt수강중인 홍문기입니다.'
   }
 }
