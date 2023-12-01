@@ -55,27 +55,23 @@
       return element;
     }
 
-    // 상태 데이터 정의
-    const stateData = [
-      { hash: '#', text: '이름 : 윤준현' },
-      { hash: '#about', text: 'git : 대충 깃 주소' },
-    ];
-
-    // 가상 DOM 생성
-    const virtualDom = MenuComponent(stateData);
     // 렌더링 결과를 특정 컨테이너에 추가
     const container = document.getElementById('root');
 
     // -------------
-    const Box = createElement('div', { id: 'Yoonjieut'}, leftDiv, rightDiv);
+    const Box = createElement('div', { id: 'Yoonjieut'}, innerBox);
+    console.log(Box);
+    const innerBox = [leftDiv, rightDiv]
     const leftDiv = createElement('div', {id: leftDiv}, leftDivCont);
-      const leftDivCont = createElement('img', {class: "profImg",src: "#", alt:"프로필사진"});
+      // const leftDivCont = createElement('img', {class: "profImg",src: "#", alt:"프로필사진"});
     const rightDiv = createElement('div', {}, rightDivCont);
       const rightDivCont = createElement('ul', {}, list);
       const list = [name, git, intro]
         const name = createElement("li",{class: "teamName"}, "윤준현");
         const git = createElement("li",{class: "teamName"}, "https://github.com/YoonJieut");
         const intro = createElement("p", {class : "teamIntro"}, "안녕하세요 저는 윤준현입니다.")
+
+        
     container.appendChild(render(Box));
   </script>
 </body>
