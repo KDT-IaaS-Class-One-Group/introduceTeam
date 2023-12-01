@@ -1,7 +1,16 @@
+$primary-color: #3498db;
+$secondary-color: #2980b9;
+$base-spacing: 20px;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
 }
 
 ul {
@@ -11,22 +20,25 @@ ul {
 
 li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: $base-spacing;
 }
 
 a {
   text-decoration: none;
-  font-size: 20px;
-  color: black;
+  color: white;
+  background-color: $primary-color;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 a:hover {
-  color: green;
+  background-color: $secondary-color;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: $primary-color;
+  color: white;
   text-align: center;
   padding: 1em;
 }
@@ -35,16 +47,20 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: $base-spacing;
 }
 
-.intro {
-
+section {
+  flex: 1;
+  display: flex;
+  background-color: #f8f8f8;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: $primary-color;
+  color: white;
   text-align: center;
   padding: 1em;
   position: fixed;

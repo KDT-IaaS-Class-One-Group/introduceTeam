@@ -19,15 +19,12 @@ const config = {
         new HtmlWebpackPlugin({
             template: 'index.html',
         }),
-
-        // Add your plugins here
-        // Learn more about plugins from https://webpack.js.org/configuration/plugins/
     ],
     module: {
         rules: [
             {
                 test: /\.css$/i,
-                use: [stylesHandler,'css-loader'],
+                use: [stylesHandler, 'css-loader'],
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -37,18 +34,22 @@ const config = {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
                 type: 'asset',
             },
-
-            // Add your rules for custom modules here
-            // Learn more about loaders from https://webpack.js.org/loaders/
         ],
     },
+    devServer: {
+        // 개발 서버가 dist 폴더를 제공할 수 있도록 설정
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        },
+        port: 8080
+    }
 };
 
 module.exports = () => {
     if (isProduction) {
         config.mode = 'production';
-        
-        
+
+
     } else {
         config.mode = 'development';
     }
