@@ -4,9 +4,9 @@ export function introduceComponent(stateData) {
   }
 
   const name = createElement("div", {}, "name:", stateData.name);
-  const profile = createElement("div",{},"profile:", createElement("div", { src: stateData.profile }, ""));
-  const contact = createElement("div", {}, "contact:", stateData.contact);
+  // const profile = createElement("div",{},"profile:", createElement("div", { src: stateData.profile }, ""));
+  // const contact = createElement("div", {}, "contact:", stateData.contact);
   const introduce = createElement("div", {}, "introduce:", stateData.introduce);
 
-  return createElement("div", { class: "introduce" }, name, profile, contact, introduce );
+  return createElement("div", { class: "introduce" }, name,  introduce );
 }
