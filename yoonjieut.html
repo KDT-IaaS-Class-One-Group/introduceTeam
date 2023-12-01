@@ -17,6 +17,7 @@
     function createElement(type, props, ...children) {
       return { type, props, children };
     }
+
     // 컴포넌트 함수 정의
     function MenuComponent(stateData) {
       // 메뉴 아이템을 담을 배열
@@ -67,8 +68,9 @@
 
     // -------------
     const Box = createElement('div', { id: 'Yoonjieut' }, topDiv, bottomDiv);
-    const 
-    container.appendChild(render(virtualDom));
+    const topDiv = createElement('div', {id: topDiv}, topDivCont)
+    const topDivCont = createElement('')
+    container.appendChild(render(Box));
 
 
   </script>
