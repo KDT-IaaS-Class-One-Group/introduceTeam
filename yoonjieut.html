@@ -11,7 +11,7 @@
 <body>
   <!-- 렌더링 결과를 담을 루트 요소 -->
   <div id="root"></div>
-
+  <img src="" alt="">
   <script>
     // 가상 DOM 요소를 생성하는 함수 // DOM은 "문서 객체 모델"을 나타냅니다
     function createElement(type, props, ...children) {
@@ -67,12 +67,16 @@
     const container = document.getElementById('root');
 
     // -------------
-    const Box = createElement('div', { id: 'Yoonjieut' }, topDiv, bottomDiv);
-    const topDiv = createElement('div', {id: topDiv}, topDivCont)
-    const topDivCont = createElement('')
+    const Box = createElement('div', { id: 'Yoonjieut'}, leftDiv, rightDiv);
+    const leftDiv = createElement('div', {id: leftDiv}, leftDivCont);
+      const leftDivCont = createElement('img', {class: "profImg",src: "#", alt:"프로필사진"});
+    const rightDiv = createElement('div', {}, rightDivCont);
+      const rightDivCont = createElement('ul', {}, list);
+      const list = [name, git, intro]
+        const name = createElement("li",{class: "teamName"}, "윤준현");
+        const git = createElement("li",{class: "teamName"}, "https://github.com/YoonJieut");
+        const intro = createElement("p", {class : "teamIntro"}, "안녕하세요 저는 윤준현입니다.")
     container.appendChild(render(Box));
-
-
   </script>
 </body>
 </html>
