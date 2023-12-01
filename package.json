@@ -1,0 +1,11 @@
+{
+  "name": "introduceteam",
+  "version": "1.0.0",
+  "description": "폼미쳤다 팀소개",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
