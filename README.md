@@ -17,5 +17,5 @@ npm install sass
 ## 실행
 ### webpack devserver 실행
 ```
-npm start
+npm start
 ```
