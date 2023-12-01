@@ -1,28 +1,24 @@
-window.addEventListener("hashchange", () => {
+function hashChange() {
+  const hash = window.location.hash.substr(1);
   const intro = document.getElementById("intro");
 
-  const hash = window.location.hash.substr(1);
-
   switch (hash) {
-    case "김현":
-      contentDiv.innerHTML = component("hi", { style: "color:blue;" }, ["This is Page 1"]);
+    case "%EA%B9%80%ED%98%84": // 김현
+      intro.innerHTML = 'a';
       break;
-    case "신동현":
-      contentDiv.innerHTML = component("div", { style: "background-color:cadetblue;" }, [component("h1", {}, ["This is Page 2"])]);
+    case "%EC%8B%A0%EB%8F%99%ED%98%84": // 신동현
+      intro.innerHTML = 'b';
       break;
-    case "윤준현":
-      contentDiv.innerHTML = component("div", { style: "display: flex; justify-content:center; color: #ff2222;" }, [component("h1", {}, ["This is Page 3"])]);
+    case "%EC%9C%A4%EC%A4%80%ED%98%84": // 윤준현
+      intro.innerHTML = 'c';
       break;
-    case "이민구":
-      contentDiv.innerHTML = component("div", { style: "display: flex; justify-content:center; color: #333;" }, [component("h1", {}, "This is Page 4")]);
+    case "%EC%9D%B4%EB%AF%BC%EA%B5%AC": // 이민구
+      intro.innerHTML = 'd';
       break;
-    case "홍문기":
-      contentDiv.innerHTML = component("div", { style: "display: flex; justify-content:center; color: #333;" }, [component("h1", {}, "This is Page 4")]);
+    case "%ED%99%8D%EB%AC%B8%EA%B8%B0": // 홍문기
+      intro.innerHTML = 'e';
       break;
-    default: // 조건이 모두다 부합하지 않을때, 즉 false 일때 default가 실행된다. 최초 접속에는 hash가 없기 때문에 default가 실행된다.
-      contentDiv.innerHTML = component("h1", {}, ["반갑습니다. 접속할 때 보이는 페이지(처럼보이는) element입니다. "])
+    default: // 기타
+      intro.innerHTML = 'f';
   }
-
-  // 초기 로딩을 위한 코드
-  window.dispatchEvent(new Event("hashchange"));
-});
+}
