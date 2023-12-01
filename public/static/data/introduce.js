@@ -37,7 +37,7 @@ export const introduceData ={
   },
   '홍문기':{
     name: '홍문기',
-    profile: '사진첨부',
+    profile: 'https://i.namu.wiki/i/rbOAzxvUuSSNv1VuxDAZn6t1e5Q-uf_MqqeyuQKRNLKpC0sQaKaxyLzhqIlRyEdOUpce9eMOzDxuN7MwWVcBzQ.webp',
     contact: {
       github: 'https://github.com/hmoongi94',
       email:'hmoongi94@gmail.com'
