@@ -50,3 +50,8 @@ const stateData = [
 const virtualDom = component(stateData)
 const container = document.getElementById('introduce')
 container.appendChild(render(virtualDom))
+
+let kimhyun = document.getElementById('kimhyun');
+kimhyun.addEventListener('click', {
+  
+})

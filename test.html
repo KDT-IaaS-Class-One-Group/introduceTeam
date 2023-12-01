@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 150vh;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            background-color: #f0f0f0;
+            border-bottom: 2px solid #ccc;
+            opacity: 0; /* 초기에는 섹션을 숨기기 위해 투명도를 0으로 설정합니다. */
+            transition: opacity 1s ease; /* 투명도가 변경될 때의 애니메이션을 추가합니다. */
+        }
+
+        section.active {
+            opacity: 1; /* active 클래스가 추가되면 투명도를 1로 변경하여 섹션을 표시합니다. */
+        }
+    </style>
+    <title>Scroll to Section Example</title>
+</head>
+<body>
+    <section id="section1" class="active">
+        <div id="content1"></div>
+    </section>
+    <section id="section2">
+        <div id="content2"></div>
+    </section>
+    <section id="section3">
+        <div id="content3"></div>
+    </section>
+
+    <nav>
+        <ul>
+            <li><a href="#section1">Go to Section 1</a></li>
+            <li><a href="#section2">Go to Section 2</a></li>
+            <li><a href="#section3">Go to Section 3</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section');
+
+            sections.forEach(function (section) {
+                if (isInViewport(section)) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        });
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    </script>
+</body>
+</html>
