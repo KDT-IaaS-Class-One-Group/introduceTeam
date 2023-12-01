@@ -1,4 +1,4 @@
-function hashChange() {
+export function hashChange() {
   const hash = window.location.hash.substr(1);
   const intro = document.getElementById("intro");
 
