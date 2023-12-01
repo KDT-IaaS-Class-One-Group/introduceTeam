@@ -1,5 +1,8 @@
-import createElement from './createElement';
-
+// import createElement from './createElement';
+/**
+ * a태그를 누르면 바뀌는 해쉬를 추출하여 해당 팀원의 템플릿이
+ * 전송되는 로직입니다.
+ */
 export function hashChange() {
   const hash = window.location.hash.substr(1);
   const memberIntro = document.getElementById("memberIntro");
