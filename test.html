@@ -2,102 +2,66 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>팀소개 페이지</title>
     <style>
-      * {
-        list-style-type: none;
-      }
-
-      .teamMemberDisplay {
+      .menu-content {
         display: none;
+        margin-top: 10px;
       }
 
-      .teamMemberDisplay.active {
+      .menu-content.active {
         display: block;
       }
     </style>
   </head>
   <body>
-    <div id="root">
-      <ul>
-        <li id="kimhyun">김현</li>
-        <li id="leemingoo">이민구</li>
-        <li id="sindonghyun">신동현</li>
-        <li id="yunjunhyun">윤준현</li>
-        <li id="hongmongi">홍문기</li>
-      </ul>
+    <ul>
+      <li onclick="toggleMenu('kimhyun')">김현</li>
+      <li onclick="toggleMenu('leemingoo')">이민구</li>
+      <li onclick="toggleMenu('sindonghyun')">신동현</li>
+      <li onclick="toggleMenu('yunjunhyun')">윤준현</li>
+      <li onclick="toggleMenu('hongmongi')">홍문기</li>
+    </ul>
 
-      <!-- 김현 -->
-      <div id="kimhyunIntroduce" class="teamMemberDisplay">
-        <div>
-          <img src="https://avatars.githubusercontent.com/u/139582298?v=4" />
-        </div>
-        <div>
-          <h3>김현</h3>
-          <p>
-            저는 도전적인 개발자를 꿈꾸는 두 아이의 아빠이자 남편인 김현입니다.
-            오랜시간동안 영업이라는 다른 직업을 가지고 일을 해왔으나
-            실리콘밸리의 자기도전적이고 세상을 바꾸는데 노력하는 다양한
-            개발자들을 보고 개발자라는 꿈을 꾸게 되었습니다. 늦게 시작한만큼
-            아직 부족함을 많이 느끼지만 세상을 위해, 꿈을 위해 열심히 도전하는
-            개발자가 되도록 나아가겠습니다.
-          </p>
-          <p>https://github.com/forhn37</p>
-        </div>
-
-        <!-- 이민구 -->
-        <div id="leemingoo" class="teamMemberDisplay">
-          <img src="https://avatars.githubusercontent.com/u/137541277?v=4" />
-          <div>
-            <h3>이민구</h3>
-            <p>
-              저는 13살에 단순한 호기심으로 개발에 관심을 가지고 VisualBasic
-              6.0, Visual C 6.0을 시작했습니다. 처음엔 단순한 호기심이었으나
-              점점 개발자라는 직업을 꿈으로 잡기 시작했고 시간의 흐름에따라 웹이
-              우리 생활에 필수가 되어 웹개발에 필요한 HTML, CSS, JavaScript,
-              Node.JS, React, TypeScript 등 을 추가로 공부하였습니다. 저는
-              언어에 구애받지 않고 다양한 프로젝트를 수행할 수 있는 역량을
-              키우고 있으며. 또한, 회사나 고객의 요구사항을 빠르게 파악하고
-              최적의 솔루션을 제시할 수 있는 능력을 갖추게 되었습니다.
-            </p>
-            <p>https://github.com/YoonJieut</p>
-          </div>
-        </div>
-
-
-      </div>
-
-      <script>
-        const kimhyun = document.getElementById("kimhyun");
-        const yunjunhyun = document.getElementById("yunjunhyun");
-        const hongmongi = document.getElementById("hongmongi");
-        const sindonghyun = document.getElementById("sindonghyun");
-        const leemingoo = document.getElementById("leemingoo");
-
-        kimhyun.addEventListener("click", function () {
-          // 목록 초기화
-          document
-            .querySelectorAll("teamMemberDisplay")
-            .forEach(function (introduceTemplate) {
-              introduceTemplate.classList.remove("active");
-            });
-
-          document.getElementById("kimhyunIntroduce").classList.add("active");
-        });
-
-        leemingoo.addEventListener("click", function () {
-          // 목록 초기화
-          document
-            .querySelectorAll("teamMemberDisplay")
-            .forEach(function (introduceTemplate) {
-              introduceTemplate.classList.remove("active");
-            });
-
-          document.getElementById("kimhyunIntroduce").classList.add("active");
-        });
-      </script>
+    <div id="kimhyun" class="menu-content">
+      <h2>김현 정보</h2>
+      <p>김현에 대한 내용이 여기에 들어갑니다.</p>
     </div>
+
+    <div id="leemingoo" class="menu-content">
+      <h2>이민구 정보</h2>
+      <p>이민구에 대한 내용이 여기에 들어갑니다.</p>
+    </div>
+
+    <div id="sindonghyun" class="menu-content">
+      <h2>신동현 정보</h2>
+
+      <p>신동현에 대한 내용이 여기에 들어갑니다.</p>
+    </div>
+
+    <div id="yunjunhyun" class="menu-content">
+      <h2>윤준현 정보</h2>
+      <p>윤준현에 대한 내용이 여기에 들어갑니다.</p>
+    </div>
+
+    <div id="hongmongi" class="menu-content">
+      <h2>홍문기 정보</h2>
+      <p>홍문기에 대한 내용이 여기에 들어갑니다.</p>
+    </div>
+
+    <script>
+      function toggleMenu(menuId) {
+        // 모든 메뉴 숨김
+        let allMenus = document.querySelectorAll(".menu-content");
+        allMenus.forEach(function (menu) {
+          menu.classList.remove("active");
+        });
+
+        // 클릭한 메뉴만 표시
+        let selectedMenu = document.getElementById(menuId);
+        selectedMenu.classList.add("active");
+      }
+    </script>
   </body>
 </html>
