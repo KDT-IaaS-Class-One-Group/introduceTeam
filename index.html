@@ -14,32 +14,25 @@
       background-attachment: fixed;
     }
 
-    h1 {
-      color: #ffffff;
-    }
+
   </style>
 </head>
 
 <body>
   <div id="root">
-    <button id="playButton">음악 재생</button>
     <!-- 자동으로 재생되도록 autoplay 속성 추가 -->
-    <audio id="backgroundMusic" src="../introduceTeam/source/봄에_자전거_여행.mp3" volume="0.5" loop></audio>
+    <audio id="BGM" src="./source/BGM.mp3" volume="0.5" loop autoplay></audio>
   </div>
 
   <script>
-    // 페이지 로딩 후 실행되는 코드
+    // 페이지 로딩 시 실행되는 코드
     document.addEventListener('DOMContentLoaded', function () {
       // audio 태그 요소 가져오기
-      const audioElement = document.getElementById('backgroundMusic');
+      const audioElement = document.getElementById('BGM');
 
-      // 플레이 버튼 클릭 시 음악 재생
-      document.getElementById('playButton').addEventListener('click', function () {
-        // 사용자 상호 작용 후에 play 호출
-        audioElement.play().catch(error => {
-          // Autoplay가 차단된 경우에 대한 예외 처리
-          console.error("Autoplay failed:", error);
-        });
+      // 음악이 끝나면 다시 재생되도록 이벤트 리스너 추가
+      audioElement.addEventListener('ended', function () {
+        audioElement.play();
       });
     });
   </script>
