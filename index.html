@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+/* Body의 기본 스타일 설정 */
+body {
+    margin: 0;
+    height: 100vh; /* 전체 뷰포트 높이 */
+    overflow: hidden; /* 뷰포트 밖으로 나간 div 숨김 */
+    position: relative; /* div의 위치를 상대적으로 설정 */
+}
+
+/* 각 div의 기본 스타일 */
+div {
+    width: 100px; /* div의 너비 */
+    height: 100px; /* div의 높이 */
+    position: absolute; /* 절대 위치 */
+    top: 0; /* 초기 상단 위치 */
+}
+
+#div1 { 
+  background-color: red; 
+  left: 0;
+}
+#div2 { 
+  background-color: blue; 
+  left: 100px;
+}
+#div3 { 
+  background-color: green; 
+  left: 200px;
+}
+#div4 { 
+  background-color: yellow; 
+  left: 300px;
+}
+#div5 { 
+  background-color: purple; 
+  left: 400px;
+}
+
+  </style>
+</head>
+<body>
+  
+
+
+
+
+  <div id="name-hongmongi"></div>
+  <div id="name-leemingoo"></div>
+  <div id="name-yunjunhyun"></div>
+  <div id="name-sindonghyun"></div>
+  <div id="name-kimhyun"></div>
+
+  <script>
+    function animateDivs() {
+    const idMenu = [
+      name-hongmongi,
+      name-leemingoo,
+      name-yunjunhyun,
+      name-sindonghyun,
+      name-kimhyun,
+    ];
+
+    const divs = document.querySelectorAll('div');
+    console.log(divs);
+    divs.forEach(div => {
+        let position = 0; // 초기 위치
+        let velocity = 2; // 이동 속도
+        let direction = 1; // 초기 방향 (1: 아래로, -1: 위로)
+
+        function animate() {
+            // 현재 뷰포트의 높이
+            const viewportHeight = window.innerHeight;
+            // div의 높이
+            const divHeight = div.offsetHeight;
+
+            // div의 새로운 위치 계산
+            position += velocity * direction;
+
+            // 벽에 닿으면 방향 반대로 변경
+            if (position <= 0 || (position + divHeight) >= viewportHeight) {
+                direction *= -1;
+            }
+
+            // div의 위치 업데이트
+            div.style.top = `${position}px`;
+            requestAnimationFrame(animate);
+        }
+
+        // 애니메이션 시작
+        animate();
+    });
+}
+
+// 함수 호출
+// animateDivs();
+
+  </script>
+</body>
+</html>
