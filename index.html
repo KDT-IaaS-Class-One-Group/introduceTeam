@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>form 미쳤다</title>
+  <!-- Howler.js 추가 -->
+  <script src="https://unpkg.com/howler@2.2.3/dist/howler.min.js"></script>
 </head>
+
 <body>
   <div id="root">
-    <audio id="backgroundAudio" controls autoplay loop>
-      <source src="../introduceTeam/source/봄에_자전거_여행.mp3" type="audio/mp3">
-      크롬에서 autoplay 기능이 작동하지 않는 이슈 분석 
-      </audio>
+    <!-- controls 및 autoplay 속성 제거 -->
+    <!-- <audio id="backgroundAudio" loop>
+      <source src="" type="audio/mp3">
+      크롬에서 autoplay 기능이 작동하지 않는 이슈 분석
+    </audio> -->
   </div>
+
+  <script>
+    // Howler.js를 사용하여 사운드 생성
+    const sound = new Howl({
+      src: ['../introduceTeam/source/봄에_자전거_여행.mp3'],
+      volume: 5.0,
+      autoplay: true,
+      loop: true, // Howler.js에서는 loop 속성을 사용
+      onend: () => {
+        console.log('Finished!');
+      }
+    });
+  </script>
 </body>
+
 </html>
