@@ -5,45 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>form 미쳤다</title>
-  <!-- Howler.js 추가 -->
-  <script src="https://unpkg.com/howler@2.2.3/dist/howler.min.js"></script>
   <style>
     body {
-    background-image: url('../introduceTeam/source/sea.gif');
-    background-size: cover; /* 화면을 완전히 채우도록 설정 */
-    background-position: center; /* 이미지를 가운데 정렬 */
-    background-repeat: no-repeat; /* 배경 이미지 반복 없이 설정 */
-    background-attachment: fixed; /* 스크롤 시 배경 이미지가 고정되도록 설정 */
-    
+      background-image: url('../introduceTeam/source/sea.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
 
-}
-
-/* 선택적으로 텍스트 스타일링을 할 수 있습니다. */
-h1 {
-    color: #ffffff;
-}
+    h1 {
+      color: #ffffff;
+    }
   </style>
 </head>
 
 <body>
   <div id="root">
     <button id="playButton">음악 재생</button>
+    <!-- 자동으로 재생되도록 autoplay 속성 추가 -->
+    <audio id="backgroundMusic" src="../introduceTeam/source/봄에_자전거_여행.mp3" volume="0.5" loop></audio>
   </div>
 
-  
-
   <script>
-    // 버튼 클릭 시 Howler.js를 초기화하고 사운드 재생
-    document.getElementById('playButton').addEventListener('click', function () {
-      // Howler.js를 사용하여 사운드 생성
-      const sound = new Howl({
-        src: ['../introduceTeam/source/봄에_자전거_여행.mp3'],
-        volume: 0.5,
-        autoplay: true,
-        loop: true,
-        onend: () => {
-          console.log('Finished!');
-        }
+    // 페이지 로딩 후 실행되는 코드
+    document.addEventListener('DOMContentLoaded', function () {
+      // audio 태그 요소 가져오기
+      const audioElement = document.getElementById('backgroundMusic');
+
+      // 플레이 버튼 클릭 시 음악 재생
+      document.getElementById('playButton').addEventListener('click', function () {
+        // 사용자 상호 작용 후에 play 호출
+        audioElement.play().catch(error => {
+          // Autoplay가 차단된 경우에 대한 예외 처리
+          console.error("Autoplay failed:", error);
+        });
       });
     });
   </script>
