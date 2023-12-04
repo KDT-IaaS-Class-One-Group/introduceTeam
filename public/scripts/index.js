@@ -1,5 +1,14 @@
 console.log('script started');
 
+const teamMemberContainer = document.getElementById('team-member');
+// 4개의 자식 div 동적 생성 및 추가
+for (let i = 1; i <= 4; i++) {
+  const dynamicDiv = createDynamicElement('div', {});
+
+  // 동적으로 생성한 div를 team-member 요소에 추가
+  teamMemberContainer.appendChild(dynamicDiv);
+}
+
 import backgroundClickToShowDivs from "./backgroundClickToShowDivs.js";
 import selectDivs from "./selectDivs.js";
 
