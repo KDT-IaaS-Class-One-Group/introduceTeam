@@ -21,7 +21,7 @@ import selectDivs from "./selectDivs.js";
 //       console.log("body click event active");
 //         // ! divs를 타겟에 맞춰 바꿔야 한다.
 //         const divs = document.querySelectorAll('div');
-//         divs.forEach(div => div.style.display = ''); // 모든 div 보이기
+//         divs.forEach(div => div.style.visibility = ''); // 모든 div 보이기
 //     });
 // }
 
@@ -62,6 +62,12 @@ function animateDivs() {
     });
 }
 
+//* 최종 모듈 조합
+// todo : 두 번이상 로직이 돌아가도 정상작동 해야한다.
+
+//* selectDivs() : 클릭 한 후 모든 div가 사라진다.
+//* selectDivs - callback : 만약, visible divs[0].visibilty가 none이면 backgroundClickToShowDivs가 작동된다.
+//* 아니라면, 
 selectDivs(()=>{
   console.log('selectDivs 함수 실행 완료');
   
