@@ -6,6 +6,7 @@ export default function selectDivs(callback) {
         divs.forEach((x)=>{x.style.visibility = 'hidden';})
         callback(); // 콜백 함수 실행
         event.stopPropagation();
+        
       });
     });
 }
