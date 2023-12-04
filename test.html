@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>팀소개 페이지</title>
-    <style>
-      .menu-content {
-        display: none;
-        margin-top: 10px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>form 미쳤다</title>
+  <style>
+    .menu-content {
+      display: none;
+      margin-top: 10px;
+    }
 
-      .menu-content.active {
-        display: block;
-      }
-    </style>
+    .menu-content.active {
+      display: block;
+    }
+
+    .BGM {
+      display: none;
+    }
+  </style>
   </head>
+
   <body>
     <ul>
       <li onclick="toggleMenu('kimhyun')">김현</li>
@@ -51,7 +56,24 @@
     </div>
 
     <script type="module">
-      import {} from index.js
+      import { } from index.js
+    </script>
+
+    <button id="playButton">음악 재생</button>
+    <audio id="BGM">
+      <source src="../introduceTeam/bgm/봄에 자전거 여행.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+      document.getElementById('playButton').addEventListener('click', function () {
+        const audio = document.getElementById('BGM');
+        if (audio) {
+          audio.play();
+          // 버튼 숨기기
+          this.style.display = 'none';
+        }
+      });
     </script>
   </body>
+
 </html>
