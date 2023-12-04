@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 미쳤다</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #root {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("./images/sea.gif");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>form 미쳤다</title>
-  <style>
-    body {
-      background-image: url('./source/sea.gif');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-  </style>
-</head>
+  <body>
+    <div id="root">
+      <!-- 자동으로 재생되도록 autoplay 속성 추가 -->
+      <button id="playButton">음악 재생</button>
+      <audio id="bgm" src="./sounds/bgm.mp3" volume="100.0" loop autoplay></audio>
+    </div>
 
-<body>
-  <div id="root">
-    <!-- 자동으로 재생되도록 autoplay 속성 추가 -->
-    <audio id="BGM" src="./source/BGM.mp3" volume="0.5" loop autoplay></audio>
-  </div>
+    <script>
+      // audio 태그 요소 가져오기
+      const root = document.getElementById("root");
+      const bgm = document.getElementById("bgm");
+      root.addEventListener("mousemove", () => {
+        bgm.play().catch((error) => {});
+      });
 
-  <script>
-    // audio 태그 요소 가져오기
-    const audioElement = document.getElementById('BGM');
-
-    // 음악이 끝나면 다시 재생되도록 이벤트 리스너 추가
-    audioElement.addEventListener('ended', function () {
-      audioElement.play();
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
