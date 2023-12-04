@@ -5,6 +5,7 @@ export default function selectDivs(callback) {
       div.addEventListener('click', () => {
         divs.forEach((x)=>{x.style.visibility = 'hidden';})
         callback(); // 콜백 함수 실행
+        event.stopPropagation();
       });
-  });
+    });
 }

@@ -64,10 +64,11 @@ function animateDivs() {
 
 selectDivs(()=>{
   console.log('selectDivs 함수 실행 완료');
-  setTimeout(()=>{
-    backgroundClickToShowDivs()
-  }, 1000)
+  
 });
+
+backgroundClickToShowDivs()
+
 animateDivs();
 
 
