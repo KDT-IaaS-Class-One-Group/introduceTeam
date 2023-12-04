@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메뉴 토글 예시</title>
+  <style>
+    .menu-content {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .menu-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <ul>
+    <li onclick="toggleMenu('menu1')">메뉴 1</li>
+    <li onclick="toggleMenu('menu2')">메뉴 2</li>
+    <li onclick="toggleMenu('menu3')">메뉴 3</li>
+  </ul>
+
+  <div id="menu1" class="menu-content">
+    <h2>메뉴 1 정보</h2>
+    <p>메뉴 1에 대한 내용이 여기에 들어갑니다.</p>
+  </div>
+
+  <div id="menu2" class="menu-content">
+    <h2>메뉴 2 정보</h2>
+    <p>메뉴 2에 대한 내용이 여기에 들어갑니다.</p>
+  </div>
+
+  <div id="menu3" class="menu-content">
+    <h2>메뉴 3 정보</h2>
+    <p>메뉴 3에 대한 내용이 여기에 들어갑니다.</p>
+  </div>
+
+  <script>
+    function toggleMenu(menuId) {
+      // 모든 메뉴 숨김
+      var allMenus = document.querySelectorAll('.menu-content');
+      allMenus.forEach(function(menu) {
+        menu.classList.remove('active');
+      });
+
+      // 클릭한 메뉴만 표시
+      var selectedMenu = document.getElementById(menuId);
+      selectedMenu.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
