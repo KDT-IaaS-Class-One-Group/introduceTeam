@@ -7,14 +7,12 @@
   <title>form 미쳤다</title>
   <style>
     body {
-      background-image: url('../introduceTeam/source/sea.gif');
+      background-image: url('./source/sea.gif');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
-
-
   </style>
 </head>
 
@@ -25,15 +23,12 @@
   </div>
 
   <script>
-    // 페이지 로딩 시 실행되는 코드
-    document.addEventListener('DOMContentLoaded', function () {
-      // audio 태그 요소 가져오기
-      const audioElement = document.getElementById('BGM');
+    // audio 태그 요소 가져오기
+    const audioElement = document.getElementById('BGM');
 
-      // 음악이 끝나면 다시 재생되도록 이벤트 리스너 추가
-      audioElement.addEventListener('ended', function () {
-        audioElement.play();
-      });
+    // 음악이 끝나면 다시 재생되도록 이벤트 리스너 추가
+    audioElement.addEventListener('ended', function () {
+      audioElement.play();
     });
   </script>
 </body>
