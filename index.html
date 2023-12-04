@@ -63,8 +63,9 @@ function selectDivs(callback) {
     const divs = document.querySelectorAll('div');
     divs.forEach(div => {
         div.addEventListener('click', () => {
-            divs.forEach(d => d.style.display = 'none'); // 모든 div 숨기기
-            callback(); // 콜백 함수 실행
+          //ㅁㄴㅇㅁㄴㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁ
+          div.style.visibility = 'hidden';
+          callback(); // 콜백 함수 실행
         });
     });
 }
