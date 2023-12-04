@@ -21,23 +21,23 @@ div {
     top: 0; /* 초기 상단 위치 */
 }
 
-#div1 { 
+#name-hongmongi { 
   background-color: red; 
   left: 0;
 }
-#div2 { 
+#name-leemingoo { 
   background-color: blue; 
   left: 100px;
 }
-#div3 { 
+#name-yunjunhyun { 
   background-color: green; 
   left: 200px;
 }
-#div4 { 
+#name-sindonghyun { 
   background-color: yellow; 
   left: 300px;
 }
-#div5 { 
+#name-kimhyun { 
   background-color: purple; 
   left: 400px;
 }
@@ -57,41 +57,73 @@ div {
   <div id="name-kimhyun"></div>
 
   <script>
-    function animateDivs() {
-    //todo index.html에 따라 이 부분을 수정해야한다
-    const divs = document.querySelectorAll('body > div');
-    console.log(divs);
+
+// 1번 모듈: Div 선택 로직
+function selectDivs(callback) {
+    const divs = document.querySelectorAll('div');
     divs.forEach(div => {
-        let position = 0; // 초기 위치
-        let velocity = 2; // 이동 속도
-        let direction = 1; // 초기 방향 (1: 아래로, -1: 위로)
+        div.addEventListener('click', () => {
+            divs.forEach(d => d.style.display = 'none'); // 모든 div 숨기기
+            callback(); // 콜백 함수 실행
+        });
+    });
+}
+
+// 2번 모듈: 배경 클릭 로직
+function backgroundClickToShowDivs() {
+    document.body.addEventListener('click', () => {
+        // ! divs를 타겟에 맞춰 바꿔야 한다.
+        const divs = document.querySelectorAll('div');
+        divs.forEach(div => div.style.display = ''); // 모든 div 보이기
+    });
+}
+
+// 3번 모듈 : 좌우로 헤엄치는 로직 구현
+function animateDivs() {
+    const divs = document.querySelectorAll('div');
+    divs.forEach((div, index) => {
+        let horizontalPosition = 100 * index;
+        let verticalPosition = 200;
+        let wavePhase = Math.random() * 2 * Math.PI;
+        let horizontalSpeed = 0.5 + Math.random();
+        const waveSpeed = 0.02;
+        const waveAmplitude = 100;
+        let direction = 1; // 이동 방향 (1: 오른쪽, -1: 왼쪽)
 
         function animate() {
-            // 현재 뷰포트의 높이
-            const viewportHeight = window.innerHeight;
-            // div의 높이
-            const divHeight = div.offsetHeight;
+            // 윈도우 너비 확인
+            const windowWidth = window.innerWidth;
+            const divWidth = div.offsetWidth;
 
-            // div의 새로운 위치 계산
-            position += velocity * direction;
-
-            // 벽에 닿으면 방향 반대로 변경
-            if (position <= 0 || (position + divHeight) >= viewportHeight) {
-                direction *= -1;
+            // 가로 위치 업데이트 및 경계 확인
+            horizontalPosition += horizontalSpeed * direction;
+            if (horizontalPosition <= 0 || (horizontalPosition + divWidth) >= windowWidth) {
+                direction *= -1; // 방향 전환
             }
 
-            // div의 위치 업데이트
-            div.style.top = `${position}px`;
+            // 물결 움직임 계산
+            wavePhase += waveSpeed;
+            verticalPosition = 200 + waveAmplitude * Math.sin(wavePhase);
+
+            // div 위치 업데이트
+            div.style.left = `${horizontalPosition}px`;
+            div.style.top = `${verticalPosition}px`;
+
             requestAnimationFrame(animate);
         }
 
-        // 애니메이션 시작
         animate();
     });
 }
 
-// 함수 호출
-// animateDivs();
+selectDivs(()=>{
+  console.log('selectDivs 함수 실행 완료');
+  backgroundClickToShowDivs()
+});
+animateDivs();
+
+
+
 
   </script>
 </body>
