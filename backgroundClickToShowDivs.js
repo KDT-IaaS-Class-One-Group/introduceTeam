@@ -4,6 +4,7 @@ export default function backgroundClickToShowDivs() {
     console.log("body click event active");
       // ! divs를 타겟에 맞춰 바꿔야 한다.
       const divs = document.querySelectorAll('div');
-      divs.forEach(div => div.style.display = ''); // 모든 div 보이기
+      setTimeout
+      divs.forEach(div => div.style.visibility = ''); // 모든 div 보이기
   });
 }

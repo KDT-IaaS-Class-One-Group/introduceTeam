@@ -1,16 +1,16 @@
 console.log('script started');
 
-import animate from "./animate.js";
 import backgroundClickToShowDivs from "./backgroundClickToShowDivs.js";
 import selectDivs from "./selectDivs.js";
 
 // // 1번 모듈: Div 선택 로직
 // function selectDivs(callback) {
-//     const divs = document.querySelectorAll('div');
-//     divs.forEach(div => {
-//         div.addEventListener('click', () => {
-//           divs.forEach((x)=>{x.style.visibility = 'hidden';})
-//           callback(); // 콜백 함수 실행
+  //     const divs = document.querySelectorAll('div');
+  //     divs.forEach(div => {
+    //         div.addEventListener('click', () => {
+      //           divs.forEach((x)=>{x.style.visibility = 'hidden';})
+      //           callback(); // 콜백 함수 실행
+      //           //callback: 소개 템플릿 불러오는 함수
 //         });
 //     });
 // }
@@ -37,34 +37,36 @@ function animateDivs() {
         const waveAmplitude = 100;
         let direction = 1; // 이동 방향 (1: 오른쪽, -1: 왼쪽)
 
-        // function animate() {
-        //     // 윈도우 너비 확인
-        //     const windowWidth = window.innerWidth;
-        //     const divWidth = div.offsetWidth;
+        function animate() {
+            // 윈도우 너비 확인
+            const windowWidth = window.innerWidth;
+            const divWidth = div.offsetWidth;
 
-        //     // 가로 위치 업데이트 및 경계 확인
-        //     horizontalPosition += horizontalSpeed * direction;
-        //     if (horizontalPosition <= 0 || (horizontalPosition + divWidth) >= windowWidth) {
-        //         direction *= -1; // 방향 전환
-        //     }
+            // 가로 위치 업데이트 및 경계 확인
+            horizontalPosition += horizontalSpeed * direction;
+            if (horizontalPosition <= 0 || (horizontalPosition + divWidth) >= windowWidth) {
+                direction *= -1; // 방향 전환
+            }
 
-        //     // 물결 움직임 계산
-        //     wavePhase += waveSpeed;
-        //     verticalPosition = 200 + waveAmplitude * Math.sin(wavePhase);
+            // 물결 움직임 계산
+            wavePhase += waveSpeed;
+            verticalPosition = 200 + waveAmplitude * Math.sin(wavePhase);
 
-        //     // div 위치 업데이트
-        //     div.style.left = `${horizontalPosition}px`;
-        //     div.style.top = `${verticalPosition}px`;
+            // div 위치 업데이트
+            div.style.left = `${horizontalPosition}px`;
+            div.style.top = `${verticalPosition}px`;
 
-        //     requestAnimationFrame(animate);
-        // }
+            requestAnimationFrame(animate);
+        }
         animate();
     });
 }
 
 selectDivs(()=>{
   console.log('selectDivs 함수 실행 완료');
-  backgroundClickToShowDivs()
+  setTimeout(()=>{
+    backgroundClickToShowDivs()
+  }, 1000)
 });
 animateDivs();
 
