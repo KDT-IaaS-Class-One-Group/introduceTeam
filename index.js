@@ -3,27 +3,27 @@ console.log('script started');
 import backgroundClickToShowDivs from "./backgroundClickToShowDivs.js";
 import selectDivs from "./selectDivs.js";
 
-// // 1번 모듈: Div 선택 로직
-// function selectDivs(callback) {
-  //     const divs = document.querySelectorAll('div');
-  //     divs.forEach(div => {
-    //         div.addEventListener('click', () => {
-      //           divs.forEach((x)=>{x.style.visibility = 'hidden';})
-      //           callback(); // 콜백 함수 실행
-      //           //callback: 소개 템플릿 불러오는 함수
-//         });
-//     });
-// }
+// 1번 모듈: Div 선택 로직
+function selectDivs(callback) {
+      const divs = document.querySelectorAll('div');
+      divs.forEach(div => {
+            div.addEventListener('click', () => {
+                divs.forEach((x)=>{x.style.visibility = 'hidden';})
+                callback(); // 콜백 함수 실행
+                //callback: 소개 템플릿 불러오는 함수
+        });
+    });
+}
 
-// // 2번 모듈: 배경 클릭 로직
-// function backgroundClickToShowDivs() {
-//     document.body.addEventListener('click', () => {
-//       console.log("body click event active");
-//         // ! divs를 타겟에 맞춰 바꿔야 한다.
-//         const divs = document.querySelectorAll('div');
-//         divs.forEach(div => div.style.visibility = ''); // 모든 div 보이기
-//     });
-// }
+// 2번 모듈: 배경 클릭 로직
+function backgroundClickToShowDivs() {
+    document.body.addEventListener('click', () => {
+      console.log("body click event active");
+        // ! divs를 타겟에 맞춰 바꿔야 한다.
+        const divs = document.querySelectorAll('div');
+        divs.forEach(div => div.style.visibility = ''); // 모든 div 보이기
+    });
+}
 
 // 3번 모듈 : 좌우로 헤엄치는 로직 구현
 function animateDivs() {
@@ -61,6 +61,7 @@ function animateDivs() {
         animate();
     });
 }
+
 
 //* 최종 모듈 조합
 // todo : 두 번이상 로직이 돌아가도 정상작동 해야한다.
