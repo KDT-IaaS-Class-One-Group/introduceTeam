@@ -1,3 +1,9 @@
+/**
+ * 실행함수로서, element를 생성하고 속성을 세팅해주는 로직입니다.
+ * @param {String} elementType 
+ * @param {Object} attributes 
+ * @returns 실행 함수
+ */
 export default function createDynamicElement(elementType, attributes) {
   const element = document.createElement(elementType);
   
