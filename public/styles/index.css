@@ -5,6 +5,7 @@
 }
 
 #root {
+  display: flex;
   width: 100vw;
   height: 100vh;
   background-image: url("../images/ocean.gif");
@@ -16,39 +17,24 @@
   position: relative;
 }
 
-/* 각 div의 기본 스타일 */
-div {
-  width: 100px;
-  /* div의 너비 */
-  height: 100px;
-  /* div의 높이 */
-  position: absolute;
-  /* 절대 위치 */
-  top: 0;
-  /* 초기 상단 위치 */
-}
-
-#name-hongmongi {
+.teamMemberName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("../images/fish.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  position: absolute;
   left: 0;
 }
 
-#name-leemingoo {
-  background-image: url("../images/fish.png");
-  left: 100px;
+.teamMemberIntroduce {
+  display: none;
+  margin-top: 10px;
 }
 
-#name-yunjunhyun {
-  background-image: url("../images/fish.png");
-  left: 200px;
-}
-
-#name-sindonghyun {
-  background-image: url("../images/fish.png");
-  left: 300px;
-}
-
-#name-kimhyun {
-  background-image: url("../images/fish.png");
-  left: 400px;
+.teamMemberIntroduce.active {
+  display: block;
 }
