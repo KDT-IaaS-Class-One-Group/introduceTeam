@@ -1,13 +1,13 @@
 export default function animateTeamMemberName() {
-  const divs = document.querySelectorAll('.teamMember div');
+  const divs = document.querySelectorAll('.teamMemberName div');
   divs.forEach((div, index) => {
     let horizontalPosition = 100 * index;
-    let verticalPosition = 400;
+    let verticalPosition = 100;
     let wavePhase = Math.random() * 2 * Math.PI;
     let horizontalSpeed = 0.5 + Math.random();
     const waveSpeed = 0.02;
     const waveAmplitude = 100;
-    let direction = 1;
+    let direction = 2;
 
     function animate() {
       const windowWidth = window.innerWidth;
@@ -19,10 +19,10 @@ export default function animateTeamMemberName() {
       }
 
       wavePhase += waveSpeed;
-      verticalPosition = 400 + waveAmplitude * Math.sin(wavePhase);
+      verticalPosition = 100 + waveAmplitude * Math.sin(wavePhase);
 
       div.style.left = `${horizontalPosition}px`;
-      div.style.top = `${verticalPosition}px`;
+      div.style.bottom = `${verticalPosition}px`;
 
       requestAnimationFrame(animate);
     }
