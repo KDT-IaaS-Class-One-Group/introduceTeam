@@ -17,7 +17,7 @@
   position: relative;
 }
 
-.teamMemberName {
+.teamMember > div {
   display: flex;
   justify-content: center;
   align-items: center;
