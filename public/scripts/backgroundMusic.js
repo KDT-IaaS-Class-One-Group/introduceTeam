@@ -1,3 +1,3 @@
-export default document.addEventListener('mousemove', function () {
+export default document.addEventListener('mousemove', () => {
   document.getElementById('bgm').play();
 });
