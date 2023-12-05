@@ -1,6 +1,6 @@
 export default function animateTeamMemberName() {
-  const divs = document.querySelectorAll('.teamMemberName div');
-  divs.forEach((div, index) => {
+  const teamMemberName = document.querySelectorAll('.teamMemberName > div');
+  teamMemberName.forEach((div, index) => {
     let horizontalPosition = 100 * index;
     let verticalPosition = 100;
     let wavePhase = Math.random() * 2 * Math.PI;
@@ -9,7 +9,7 @@ export default function animateTeamMemberName() {
     const waveAmplitude = 100;
     let direction = 2;
 
-    function animate() {
+    const animate = () => {
       const windowWidth = window.innerWidth;
       const divWidth = div.offsetWidth;
 
