@@ -1,1 +1,0 @@
-cursor: url('../images/cursor.png'), auto;
