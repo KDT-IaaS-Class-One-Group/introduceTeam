@@ -9,6 +9,10 @@
   </head>
   <body>
     <div id="root">
+      <div class="teamMemberIntroduce">
+        <img src="./images/seagull.gif" alt="">
+        <div>test</div>
+      </div>
       <div class="teamMemberName">
         <div>김현</div>
         <div>신동현</div>
@@ -16,37 +20,19 @@
         <div>이민구</div>
         <div>홍문기</div>
       </div>
-
-      <div class="teamMemberIntroduce">
-        <div>
-          <h2>김현 정보</h2>
-          <p>김현에 대한 내용이 여기에 들어갑니다.</p>
-        </div>
-      
-        <div>
-          <h2>이민구 정보</h2>
-          <p>이민구에 대한 내용이 여기에 들어갑니다.</p>
-        </div>
-      
-        <div>
-          <h2>신동현 정보</h2>
-          <p>신동현에 대한 내용이 여기에 들어갑니다.</p>
-        </div>
-      
-        <div>
-          <h2>윤준현 정보</h2>
-          <p>윤준현에 대한 내용이 여기에 들어갑니다.</p>
-        </div>
-      
-        <div>
-          <h2>홍문기 정보</h2>
-          <p>홍문기에 대한 내용이 여기에 들어갑니다.</p>
-        </div>
-      </div>
-
-      <audio id="bgm">
-        <source src="./sounds/bgm.mp3" type="audio/mp3">
-      </audio>
     </div>
+
+    <script>
+      document.querySelector('.teamMemberName > div').addEventListener('click', function() {
+        var introduceElement = document.querySelector('.teamMemberIntroduce');
+      
+        // Toggle the left position of .teamMemberIntroduce
+        if (introduceElement.style.left === '-100%') {
+          introduceElement.style.left = '0%';
+        } else {
+          introduceElement.style.left = '-100%';
+        }
+      });
+    </script>
   </body>
 </html>
