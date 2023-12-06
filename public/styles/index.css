@@ -31,14 +31,17 @@
 }
 
 .teamMemberName > div {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../images/fish.png");
+  background-image: url("../images/fish.gif");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   left: 0;
   cursor: url('../images/cursor/over.png'), auto;
