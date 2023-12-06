@@ -19,7 +19,6 @@
 }
 
 .teamMemberIntroduce {
-  outline: 1px solid black;
   transition: 1s all;
   width: 100vw;
   height: auto;
@@ -33,7 +32,6 @@
 }
 
 .teamMemberIntroduce > img {
-  outline: 1px solid black;
   width: 200px;
   /* position : absolute; */
   /* top:0; */
@@ -43,7 +41,6 @@
 }
 
 .teamMemberIntroduce > div {
-  outline: 1px solid black;
 
   margin: auto 0;
   width: 50%;
