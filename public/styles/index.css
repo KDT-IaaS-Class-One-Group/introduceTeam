@@ -20,13 +20,13 @@
 .teamMemberIntroduce {
   width: 100vw;
   position: absolute;
-  left: -100%; /* 초기에 왼쪽에 숨김 */
+  left: 0%; /* 초기에 왼쪽에 숨김 -100% */
   transition: left 2s ease-out; /* 트랜지션 적용 */
 }
 
 .teamMemberIntroduce > img {
   width: 200px;
-  height: auto;
+  outline:  1px solid black;
 }
 
 .teamMemberIntroduce > div {

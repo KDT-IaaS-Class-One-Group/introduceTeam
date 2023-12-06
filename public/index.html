@@ -10,7 +10,7 @@
   <body>
     <div id="root">
       <div class="teamMemberIntroduce">
-        <img src="./images/seagull.gif" alt="">
+        <img src="./images/seagull.gif" alt="갈매기">
         <div>test</div>
       </div>
       <div class="teamMemberName">
@@ -35,7 +35,34 @@
       });
 
 
+
+      // -------------------------------
+  const teamMemberIntroduce = document.querySelector('.teamMemberIntroduce');
+  console.log(teamMemberIntroduce);
+  const textBox = teamMemberIntroduce.querySelector('.teamMemberIntroduce div');
+  console.log(textBox);
+  const seagull = teamMemberIntroduce.querySelector('.teamMemberIntroduce img');
+  console.log(seagull);
+  
+
+  console.log('onload event active');
+  const positionSeagull = () => {
+    const textBoxRect = textBox.getBoundingClientRect();
+    const teamMemberIntroduceRect = teamMemberIntroduce.getBoundingClientRect();
+
+    // textBox의 상대적인 중앙 위치 계산
+    const textBoxCenterRelative = (textBoxRect.top - teamMemberIntroduceRect.top) + (textBoxRect.height / 2);
+
+    // 갈매기 이미지 위치 조정
+    seagull.style.position = 'absolute';
+    seagull.style.top = `calc(${textBoxCenterRelative}px - 50%)`;
+    seagull.style.transform = 'translateY(-50%)';
+    seagull.style.marginLeft = '-100px';
+  };
+
+  positionSeagull();
+  window.addEventListener('resize', positionSeagull); // 브라우저 창 크기가 변경될 때마다 위치 재조정
+
     </script>
-    <script src="./scripts/animateSeagull.js" type="module"></script>
   </body>
 </html>
