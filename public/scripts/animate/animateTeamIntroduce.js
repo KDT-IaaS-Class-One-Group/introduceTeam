@@ -1,12 +1,16 @@
 export default function animateTeamIntroduce() {
-  document.querySelector('.teamMemberName > div').addEventListener('click', function() {
-    var introduceElement = document.querySelector('.teamMemberIntroduce');
-  
-    // Toggle the left position of .teamMemberIntroduce
-    if (introduceElement.style.left === '-100%') {
-      introduceElement.style.left = '0%';
-    } else {
-      introduceElement.style.left = '-100%';
-    }
-  });
+  // * 변수 이름이 적절한 것 같지 않으나 통일감을 위해서 그대로 작성한다.
+  const teamMemberName = document.querySelectorAll('.teamMemberName > div');
+  var introduceElement = document.querySelector('.teamMemberIntroduce');
+
+  teamMemberName.forEach((div) => {
+    div.addEventListener('click', function() {
+      // Toggle the left position of .teamMemberIntroduce
+      if (introduceElement.style.left === '-100%') {
+        introduceElement.style.left = '0%';
+      } else {
+        introduceElement.style.left = '-100%';
+      }
+    });
+  })
 }
