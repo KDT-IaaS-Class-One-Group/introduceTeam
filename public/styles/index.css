@@ -18,17 +18,14 @@
 }
 
 .teamMemberIntroduce {
-  display: flex;
   width: 100vw;
-  justify-content: center;
-  flex-direction: column;
   position: absolute;
   left: -100%; /* 초기에 왼쪽에 숨김 */
   transition: left 2s ease-out; /* 트랜지션 적용 */
 }
 
 .teamMemberIntroduce > img {
-  width: 50%;
+  width: 200px;
   height: auto;
 }
 
