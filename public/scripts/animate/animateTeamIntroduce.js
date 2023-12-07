@@ -12,7 +12,7 @@ export default function animateTeamIntroduce() {
           introduceElement.style.left = '0%';
         }, 500); // 0.5초
       } else {
-        introduceElement.style.left = '-100%';
+        introduceElement.style.left = '0%';
       }
     });
   });
