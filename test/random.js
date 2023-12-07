@@ -17,9 +17,9 @@ export default function randomColorname() {
     }
     return color;
   }
-  // let randomcolor = generateRandomColor();
-  return randomcolor = generateRandomColor();
-}
+  let randomcolor = generateRandomColor();
+  return randomcolor
+} 
 
 
 // console.log(randomColorname())
