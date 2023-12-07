@@ -100,8 +100,8 @@
   background-image: url("../images/fish.gif");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   position: absolute;
   left: 0;
   cursor: url("../images/cursor/over.png"), auto;
