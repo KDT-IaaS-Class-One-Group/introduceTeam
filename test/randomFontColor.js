@@ -1,10 +1,12 @@
 import { randomColorname } from "./test"
 
-function inrandomcolor() {
+export default function inrandomcolor() {
   const teamMemberName = document.querySelectorAll('.teamMemberName > div')
   
-  teamMemberName.forEach((element) = {
-    element.addEventListener
+  teamMemberName.forEach((element) => {
+    element.addEventListener('click', function() {
+      console.log(element)
+    })
   })
 }
 
