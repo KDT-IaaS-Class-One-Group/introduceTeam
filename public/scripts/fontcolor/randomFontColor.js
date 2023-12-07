@@ -1,6 +1,6 @@
 import randomColorname from "./randomColorname.js"
 
-export default function inrandomcolor() {
+export default function inrandomcolor(time) {
   const teamMemberName = document.querySelectorAll('.teamMemberName > div')
 
   console.log(teamMemberName);
@@ -9,5 +9,5 @@ export default function inrandomcolor() {
     teamMemberName.forEach(element => {
       element.style.color = randomColorname()
     })
-  }, 100);
+  }, time);
 }
