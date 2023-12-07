@@ -6,22 +6,12 @@ export default function showIntroduce(name) {
 
 
   teamMemberName.forEach(fish => {
-    fish.addEventListener('click', event => {
+    fish.addEventListener('click', () => {
       teamMembers.forEach(teamMemberArray=>{
         if(fish.textContent === teamMemberArray.name){
-          teamIntroduceDiv.textContent = teamMemberArray.info
+          teamIntroduceDiv.innerHTML = teamMemberArray.info
         }
       })
-
-      // const teamNameArray = teamMembers[0]
-      // if(fish.textContent === teamNameArray.name){
-        // teamIntroduceDiv.textContent = teamNameArray.info
-      // } 
-
-      
     });
-
   })
-
-  // teamIntroduceDiv.textContent = teamMembers
 }            
