@@ -74,6 +74,7 @@
   width: 60vh;
   display: flex;
   flex-direction: column;
+  text-align: start;
   align-items: right;
   /* justify-content: left; */
 }
