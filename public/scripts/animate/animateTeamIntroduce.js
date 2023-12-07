@@ -1,7 +1,7 @@
 export default function animateTeamIntroduce() {
   // * 변수 이름이 적절한 것 같지 않으나 통일감을 위해서 그대로 작성한다.
   const teamMemberName = document.querySelectorAll('.teamMemberName > div');
-  var introduceElement = document.querySelector('.teamMemberIntroduce');
+  const introduceElement = document.querySelector('.teamMemberIntroduce');
 
   teamMemberName.forEach((div) => {
     div.addEventListener('click', function() {
