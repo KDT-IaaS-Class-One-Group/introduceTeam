@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url("../images/cursor/default.png"), auto;
+}
+
+#root {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/backgroundImage/ocean.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+}
+
+.teamMemberIntroduce {
+  transition: 1s all;
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  top: 0;
+  /* left:-100%;  */
+  /* 옆으로 움직이는 로직이 존재, -100% 로 숨긴다. */
+
+  display: flex;
+  justify-content: center;
+}
+
+.teamMemberIntroduce > img {
+  width: 200px;
+  margin-right: -40px;
+}
+
+.teamMemberIntroduce > div {
+  margin: auto 0;
+  width: 50%;
+  padding: 10px 20px;
+  border-radius: 7px;
+  background-color: rgba(189, 91, 115, 0.664);
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  width: 40vw;
+  height: 30vw;
+  /* margin-top: 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.profile > img {
+  width: 15vw;
+  height: 20vw;
+}
+
+/* .profile > h3{
+  width: 100%
+} */
+
+.about {
+  margin: auto 0;
+  width: 60vh;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  align-items: right;
+  /* justify-content: left; */
+}
+
+.about > h3 {
+  position: relative;
+  padding: 1vw;
+  /* margin-bottom: 100px; */
+}
+
+.about > p {
+  position: relative;
+  margin-bottom: 10vw;
+}
+
+.teamMemberName > div {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/fish.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  cursor: url("../images/cursor/over.png"), auto;
+}
