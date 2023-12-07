@@ -21,7 +21,6 @@ export default function showIntroduce(name) {
       
     });
 
-   
   })
 
   // teamIntroduceDiv.textContent = teamMembers
