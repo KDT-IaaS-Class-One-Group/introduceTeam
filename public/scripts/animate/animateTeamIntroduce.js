@@ -3,13 +3,25 @@ export default function animateTeamIntroduce() {
   const teamMemberName = document.querySelectorAll('.teamMemberName > div');
   const introduceElement = document.querySelector('.teamMemberIntroduce');
 
+  function leftHund(element){
+    awaitelement.style.left = "-100%";  
+  }
+
+  function leftZero(element){
+    element.style.left = "0";  
+  }
+  async function test(){
+    const one = await leftHund();
+    const two = await leftZero();
+    one(); two();
+  }
   teamMemberName.forEach((div) => {
     div.addEventListener('click', function() {
       // Toggle the left position of .teamMemberIntroduce
       if (introduceElement.style.left === '-100%') {
         introduceElement.style.left = '0%';
       } else {
-        introduceElement.style.left = '-100%';
+        test();
       }
     });
   })
