@@ -2,7 +2,7 @@ export default function clickSoundTeamMemberName() {
   // 사운드를 재생할 audio 엘리먼트 생성
   const audioElement = document.createElement('audio');
   const sourceElement = document.createElement('source');
-  audioElement.id = 'bgm';
+  audioElement.id = 'memberClickSound';
   sourceElement.src = './sounds/click.mp3';
   sourceElement.type = 'audio/mp3';
   audioElement.appendChild(sourceElement);
