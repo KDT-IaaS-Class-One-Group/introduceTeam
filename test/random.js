@@ -20,6 +20,3 @@ export default function randomColorname() {
   let randomcolor = generateRandomColor();
   return randomcolor
 } 
-
-
-// console.log(randomColorname())
