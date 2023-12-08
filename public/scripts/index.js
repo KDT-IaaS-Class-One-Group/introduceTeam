@@ -10,3 +10,9 @@ animateTeamMemberName();
 backgroundMusic();
 animateTeamIntroduce();
 clickSoundTeamMemberName();
+
+// 화면 크기 변경 이벤트 핸들러
+window.addEventListener('resize', () => {
+  animateTeamMemberName(); 
+  // 화면 크기가 변경될 때 애니메이션 업데이트
+});
