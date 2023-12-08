@@ -52,7 +52,7 @@ export const teamMembers = [
   <div class="profile">
     <img src="https://avatars.githubusercontent.com/u/141980274?v=4" alt="">
     <h3>이민구</h3>
-    <p><a href="https://avatars.githubusercontent.com/u/137541277?v=4">https://github.com/pingulee</a></p>
+    <p><a href="https://github.com/pingulee">https://github.com/pingulee</a></p>
   </div>
   <div class="about">
     <p>
