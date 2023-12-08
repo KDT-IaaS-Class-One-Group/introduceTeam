@@ -4,7 +4,11 @@
   box-sizing: border-box;
   cursor: url("../images/cursor/default.png"), auto;
 }
-
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
 #root {
   display: flex;
   width: 100vw;
@@ -29,67 +33,76 @@
 
   display: flex;
   justify-content: center;
+  align-items: start;
+
+  color: #fff;
 }
 
 .teamMemberIntroduce > img {
   width: 200px;
+  height: 200px;
   margin-right: -40px;
 }
 
 .teamMemberIntroduce > div {
-  margin: auto 0;
-  width: 50%;
-  padding: 10px 20px;
+  width: 70vw;
+  max-height: 50vh;
+  padding: 4vh 4vh 6vh 4vh;
   border-radius: 7px;
-  background-color: rgba(189, 91, 115, 0.664);
+  background-color: rgba(105, 132, 222, 0.57);
   text-align: center;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  gap : 2vw;
+  box-shadow: 15px 7px 7px #11111128;
 }
 
 .profile {
-  width: 40vw;
-  height: 30vw;
+  flex: 1;
   /* margin-top: 50px; */
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin: auto 0;
+  align-items: start;
+  justify-content: start; 
 }
 
 .profile > img {
-  width: 15vw;
+  max-width: 200px;
+  max-height: 200px;
+  width: 20vw;
   height: 20vw;
+  border-radius: 7px;
+  box-shadow: 5px 5px 5px #11111128;
 }
 
-/* .profile > h3{
-  width: 100%
-} */
+.profile > h3{
+  margin: 10px 0;
+}
+.profile > p{
+  text-align: left;
+  font-size: 12px;
+}
 
 .about {
-  margin: auto 0;
-  width: 60vh;
+  flex: 3;
   display: flex;
   flex-direction: column;
   text-align: start;
   align-items: right;
-  /* justify-content: left; */
 }
 
 .about > h3 {
-  position: relative;
-  padding: 1vw;
-  /* margin-bottom: 100px; */
+  margin-bottom: 10px;
 }
 
 .about > p {
-  position: relative;
-  margin-bottom: 10vw;
+  font-size: 14px;
 }
 
+/* 물고기 */
 .teamMemberName > div {
   color: white;
   font-weight: bold;
