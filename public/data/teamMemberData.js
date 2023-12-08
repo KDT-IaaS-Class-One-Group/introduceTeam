@@ -49,14 +49,14 @@ export const teamMembers = [
   },
   { name: '이민구', info: `
   <div class="profile">
-    <img src="https://avatars.githubusercontent.com/u/141980274?v=4" alt="">
-    <h3>신동현</h3>
+    <img src="https://avatars.githubusercontent.com/u/137541277?v=4" alt="">
+    <h3>이민구</h3>
     <p>GitHub : <a href="https://github.com/personarpgg">https://github.com/personarpgg</a></p>
   </div>
   <div class="about">
     <h3>소개</h3>
     <p>
-      소개 : 23년 8월부터 KDT 훈련을 배우고 있는 훈련생 신동현입니다. 자바스크립트를 시작으로 과정을 수료중인데, 현재 데이터베이스와 모듈화에 대한 훈련을 개인적으로 공부하고있고, 디버깅을 통한 설계 방식을 이용하여 프로젝트를 진행하고 있습니다. 현재 개인프로젝트로 익명토론 게시판을 제작 중 입니다.
+      이민구쿤 소개란
     </p>
   </div>
   `},
