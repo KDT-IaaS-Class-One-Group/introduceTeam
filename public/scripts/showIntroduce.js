@@ -10,6 +10,7 @@ export default function showIntroduce(name) {
       teamMembers.forEach(teamMemberArray=>{
         if(fish.textContent === teamMemberArray.name){
           teamIntroduceDiv.innerHTML = teamMemberArray.info
+          
         }
       })
     });
