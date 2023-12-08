@@ -49,14 +49,14 @@ export const teamMembers = [
   },
   { name: '이민구', info: `
   <div class="profile">
-    <img src="https://avatars.githubusercontent.com/u/141980274?v=4" alt="">
-    <h3>신동현</h3>
+    <img src="https://avatars.githubusercontent.com/u/137541277?v=4" alt="">
+    <h3>이민구</h3>
     <p>GitHub : <a href="https://github.com/personarpgg">https://github.com/personarpgg</a></p>
   </div>
   <div class="about">
     <h3>소개</h3>
     <p>
-      소개 : 23년 8월부터 KDT 훈련을 배우고 있는 훈련생 신동현입니다. 자바스크립트를 시작으로 과정을 수료중인데, 현재 데이터베이스와 모듈화에 대한 훈련을 개인적으로 공부하고있고, 디버깅을 통한 설계 방식을 이용하여 프로젝트를 진행하고 있습니다. 현재 개인프로젝트로 익명토론 게시판을 제작 중 입니다.
+    저는 13살에 단순한 호기심으로 개발에 관심을 가지고 VisualBasic 6.0, Visual C 6.0을 시작했습니다. 처음엔 단순한 호기심이었으나 점점 개발자라는 직업을 꿈으로 잡기 시작했고 시간의 흐름에따라 웹이 우리 생활에 필수가 되어 웹개발에 필요한 HTML, CSS, JavaScript, Node.JS, React, TypeScript 등 을 추가로 공부하였습니다. 저는 언어에 구애받지 않고 다양한 프로젝트를 수행할 수 있는 역량을 키우고 있으며. 또한, 회사나 고객의 요구사항을 빠르게 파악하고 최적의 솔루션을 제시할 수 있는 능력을 갖추게 되었습니다.
     </p>
   </div>
   `},
