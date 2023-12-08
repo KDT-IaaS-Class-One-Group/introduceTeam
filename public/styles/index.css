@@ -34,6 +34,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: start;
+
+  color: #fff;
 }
 
 .teamMemberIntroduce > img {
@@ -47,7 +49,7 @@ a {
   max-height: 50vh;
   padding: 4vh 4vh 6vh 4vh;
   border-radius: 7px;
-  background-color: rgba(189, 91, 115, 0.664);
+  background-color: rgba(105, 132, 222, 0.57);
   text-align: center;
 
   display: flex;
@@ -64,10 +66,12 @@ a {
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: start;
+  justify-content: start; 
 }
 
 .profile > img {
+  max-width: 200px;
+  max-height: 200px;
   width: 20vw;
   height: 20vw;
   border-radius: 7px;
@@ -83,12 +87,11 @@ a {
 }
 
 .about {
-  flex: 1;
+  flex: 3;
   display: flex;
   flex-direction: column;
   text-align: start;
   align-items: right;
-  /* justify-content: left; */
 }
 
 .about > h3 {
