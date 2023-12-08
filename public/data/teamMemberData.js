@@ -4,7 +4,7 @@ export const teamMembers = [
   <div class="profile">
     <img src="https://avatars.githubusercontent.com/u/139582298?v=4" alt="프로필 사진"> 
     <h3>김현</h3>
-    <p>GitHub : <a href="https://github.com/forhn37">https://github.com/forhn37</a>
+    <p><a href="https://github.com/forhn37">https://github.com/forhn37</a>
     </p>
   </div>
   <div class="about">
@@ -21,7 +21,7 @@ export const teamMembers = [
     <div class="profile">
       <img src="https://avatars.githubusercontent.com/u/141980274?v=4" alt="">
       <h3>신동현</h3>
-      <p>GitHub : <a href="https://github.com/personarpgg">https://github.com/personarpgg</a></p>
+      <p><a href="https://github.com/personarpgg">https://github.com/personarpgg</a></p>
     </div>
     <div class="about">
       <p>
@@ -35,7 +35,7 @@ export const teamMembers = [
   <div class="profile">
     <img src="https://avatars.githubusercontent.com/u/122344184?v=4" alt="프로필사진">
     <h3>윤준현</h3>
-    <p>GitHub : <a href=" https://github.com/YoonJieut">https://github.com/YoonJieut</a></p>
+    <p><a href=" https://github.com/YoonJieut">https://github.com/YoonJieut</a></p>
   </div>
   <div class="about">
     <p>
@@ -52,7 +52,7 @@ export const teamMembers = [
   <div class="profile">
     <img src="https://avatars.githubusercontent.com/u/141980274?v=4" alt="">
     <h3>이민구</h3>
-    <p>GitHub : <a href="https://github.com/personarpgg">https://github.com/personarpgg</a></p>
+    <p><a href="https://avatars.githubusercontent.com/u/137541277?v=4">https://github.com/pingulee</a></p>
   </div>
   <div class="about">
     <p>
@@ -65,7 +65,7 @@ export const teamMembers = [
   <div class="profile">
     <img src="https://avatars.githubusercontent.com/u/141980247?v=4" alt="">
     <h3>홍문기</h3>
-    <p>GitHub : <a href="https://github.com/hmoongi94">https://github.com/hmoongi94</a></p>
+    <p><a href="https://github.com/hmoongi94">https://github.com/hmoongi94</a></p>
   </div>
   <div class="about">
     <p>
