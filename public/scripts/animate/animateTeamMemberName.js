@@ -1,6 +1,15 @@
 export default function animateTeamMemberName() {
   const teamMemberName = document.querySelectorAll('.teamMemberName > div');
-
+  
+  // 화면 너비 업데이트 함수
+  const updateWindowWidth = () => {
+    windowWidth = window.innerWidth;
+    console.log(windowWidth);
+  }
+  
+  let windowWidth = window.innerWidth; // 초기 창 너비
+  
+  // 각 요소마다 웨이브 로직 할당
   teamMemberName.forEach((div, index) => {
     // 각 요소 시작 위치
     let horizontalPosition = 100 * index;
@@ -21,23 +30,23 @@ export default function animateTeamMemberName() {
     let direction = 2;
 
     const animate = () => {
-      const windowWidth = window.innerWidth;
       const divWidth = div.offsetWidth;
-
+  
       horizontalPosition += horizontalSpeed * direction;
       if (horizontalPosition <= 0 || (horizontalPosition + divWidth) >= windowWidth) {
         direction *= -1;
       }
-
+  
       wavePhase += waveSpeed;
       verticalPosition = 100 + waveAmplitude * Math.sin(wavePhase);
-
+  
       div.style.left = `${horizontalPosition}px`;
       div.style.bottom = `${verticalPosition}px`;
-
+  
       requestAnimationFrame(animate);
-    }
-
-    animate();
+    }  
+    animate()
   });
+  // 리사이즈가 되면 windowWidth가 변경되는 이벤트 실행
+  window.addEventListener('resize', updateWindowWidth);
 }
